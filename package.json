@@ -1,6 +1,6 @@
 {
 	"name": "to-valid-identifier",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "Convert a string to a valid JavaScript identifier",
 	"license": "MIT",
 	"repository": "sindresorhus/to-valid-identifier",
