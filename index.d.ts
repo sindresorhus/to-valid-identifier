@@ -20,4 +20,4 @@ toValidIdentifier('undefined');
 //=> '$_undefined$'
 ```
 */
-export default function toValidIdentifier(value: string): value is string;
+export default function toValidIdentifier(value: string): string;
