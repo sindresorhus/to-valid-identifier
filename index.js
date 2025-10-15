@@ -3,6 +3,8 @@ import base62 from '@sindresorhus/base62';
 
 const reservedIdentifiers = reservedIdentifiers_({includeGlobalProperties: true});
 
+const encodeCodePoint = x => `$${base62.encodeInteger(x.codePointAt(0))}$`;
+
 export default function toValidIdentifier(value) {
 	if (typeof value !== 'string') {
 		throw new TypeError(`Expected a string, got \`${typeof value}\`.`);
@@ -13,5 +15,6 @@ export default function toValidIdentifier(value) {
 		return `$_${value}$`;
 	}
 
-	return value.replaceAll(/\P{ID_Continue}/gu, x => `$${base62.encodeInteger(x.codePointAt(0))}$`);
+	return value.replaceAll(/(?<!^)\P{ID_Continue}/gu, encodeCodePoint)
+		.replaceAll(/^[^_\p{ID_Start}]/gu, encodeCodePoint);
 }
