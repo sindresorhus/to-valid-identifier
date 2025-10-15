@@ -16,5 +16,5 @@ export default function toValidIdentifier(value) {
 	}
 
 	return value.replaceAll(/(?<!^)\P{ID_Continue}/gu, encodeCodePoint)
-		.replaceAll(/^\P{ID_Start}/gu, encodeCodePoint);
+		.replaceAll(/^[^_\p{ID_Start}]/gu, encodeCodePoint);
 }
