@@ -17,7 +17,7 @@
 	},
 	"sideEffects": false,
 	"engines": {
-		"node": ">=18"
+		"node": ">=20"
 	},
 	"scripts": {
 		"test": "xo && ava"
@@ -42,11 +42,11 @@
 		"property"
 	],
 	"dependencies": {
-		"@sindresorhus/base62": "^0.1.0",
+		"@sindresorhus/base62": "^1.0.0",
 		"reserved-identifiers": "^1.0.0"
 	},
 	"devDependencies": {
-		"ava": "^6.1.2",
-		"xo": "^0.58.0"
+		"ava": "^6.4.1",
+		"xo": "^1.2.3"
 	}
 }
