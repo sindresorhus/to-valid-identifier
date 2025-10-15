@@ -1,5 +1,5 @@
 /**
-Convert a string to a valid [JavaScript identifier](https://developer.mozilla.org/en-US/docs/Glossary/Identifier).
+Convert a string to a valid [JavaScript identifier](https://developer.mozilla.org/docs/Glossary/Identifier).
 
 Different inputs will always generate unique identifiers.
 
